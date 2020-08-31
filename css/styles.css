@@ -20,6 +20,14 @@ footer {
     padding: 1em 2em;
 }
 
+fieldset {
+    border: none;
+}
+
+label {
+    text-align: left;
+}
+
 input {
     width: 100%;
 }
