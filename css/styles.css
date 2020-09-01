@@ -11,6 +11,8 @@ body {
 h1 {
     background-color: #7d98a1;
     text-transform: uppercase;
+    font-size: 1.4em;
+    white-space: nowrap;
     margin: auto;
 }
 
@@ -20,16 +22,45 @@ footer {
     padding: 1em 2em;
 }
 
+header {
+    margin-bottom: 2px;
+}
+
+h2, 
+legend {
+    font-size: 1.2em;
+}
+
+form {
+    border-top: 2px solid black;
+}
+
 fieldset {
     border: none;
 }
 
-label {
+legend, 
+.contact label {
     text-align: left;
 }
 
-input {
+legend {
+    font-weight: 800;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+label {
+    font-size: .9em;
+}
+
+.contact input:not([id="zip"]), 
+select {
     width: 100%;
+}
+
+.contact input[id="zip"] {
+    width: 60%;
 }
 
 footer {
@@ -38,7 +69,29 @@ footer {
     font-style: italic;
 }
 
-.column {
+.intro {
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+    border-bottom: 5px solid black;
+}
+
+.intro, 
+.wrapper {
+    width: 95%;
+    margin: auto;
+}
+
+.contact {
     display: flex;
     flex-direction: column;
+    padding-bottom: 1.5em;
+    border-bottom: 2px solid black;
+}
+
+.contact label {
+    padding-bottom: 15px;
+}
+
+.contact label:not([for="name"]) {
+    padding-top: 15px;
 }
