@@ -55,7 +55,8 @@ span {
     font-size: .9em;
 }
 
-span {
+span, 
+.newsletter label[for="topics"] {
     display: block;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -123,10 +124,11 @@ select {
     margin-bottom: 30px;
 }
 
-/* input[type="radio"],
+input[type="radio"],
 input[type="checkbox"] {
-    margin: 0 4px 8px 0;
-} */
+    margin-right: 5px;
+    margin-top: 2px;
+}
 
 select {
     padding: 6px;
@@ -147,4 +149,38 @@ button {
     border-width: 1px 1px 3px;
     box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
     margin-bottom: 10px;
+}
+
+.newsletter label, 
+.newsletter input {
+    float: left;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media (min-width: 768px) {
+
+    .wrapper, 
+    .intro {
+        max-width: 1500px;
+    }
+
+    .field {
+        display: flex;
+        padding: .5em;
+    }
+
+    .field > label {
+        flex: 1;
+        padding-top: 1px;
+    }
+
+    .field > input {
+        flex: 4;
+    }
+
 }
