@@ -1,6 +1,10 @@
+/* ===== Universal Styles ===== */
+
 * {
     box-sizing: border-box;
 }
+
+/* ===== Element Styles ===== */
 
 body {
     font-family: 'Merriweather', serif;
@@ -9,22 +13,22 @@ body {
     color: #1c2321;
 }
 
+header {
+    margin-bottom: 2px;
+}
+
 h1 {
     background-color: #7d98a1;
     text-transform: uppercase;
     font-size: 1.4em;
     white-space: nowrap;
-    margin: auto;
 }
 
 h1, 
+button, 
 footer {
     color: #eef1ef;
     padding: 1em 2em;
-}
-
-header {
-    margin-bottom: 2px;
 }
 
 h2, 
@@ -34,22 +38,27 @@ button {
 }
 
 form {
-    border-top: 2px solid black;
+    border-top: 2px solid #1c2321;
 }
 
-fieldset {
+fieldset, 
+input, 
+textarea, 
+select, 
+button {
     border: none;
+    outline: 0;
 }
 
 legend, 
-.field > label {
+.field > label,
+span {
     text-align: left;
 }
 
 legend {
     font-weight: 800;
     padding-top: 1.5em;
-    padding-bottom: 1.5em;
 }
 
 label, 
@@ -57,39 +66,95 @@ span {
     font-size: .9em;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px;
+    background-color: #dadada;
+    color: #5e6572;
+    box-shadow: inset 0 1px 0 rgba(28,35,33,0.03);
+    margin-bottom: 30px;
+}
+
+span {
+    display: block;
+}
+
 span, 
 .newsletter label[for="topics"] {
-    display: block;
-    margin-top: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+button {
+    background-color: #a9b4c2;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
     margin-bottom: 1em;
-    text-align: left;
-}
-
-#zip {
-    width: 60%;
-}
-
-.contact {
-    border-bottom: 2px solid black;
-    padding-bottom: 1.5em;
 }
 
 footer {
     background-color: #5e6572;
     margin-top: auto;
+}
+
+footer, 
+input:required {
     font-style: italic;
 }
 
+/* ===== DRY Styles ===== */
+
+.pad {
+    padding-bottom: 1.5em;
+}
+
+.auto {
+    margin: auto;
+}
+
+/* ===== Pseudo Classes and Elements ===== */
+
+input:required {
+    text-align: right;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus,
+button:focus {
+    box-shadow: 0 0 2px 1px #5e6572;
+}
+
+::placeholder {
+    color: #acabab;
+}
+
+/* ===== Class Styles ===== */
+
 .intro {
     padding-top: 1em;
-    padding-bottom: 1.5em;
     border-bottom: 5px solid black;
 }
 
 .intro, 
 .wrapper {
     width: 95%;
-    margin: auto;
+}
+
+.contact {
+    border-bottom: 2px solid black;
 }
 
 .field {
@@ -105,68 +170,6 @@ footer {
     padding-top: 15px;
 }
 
-input:required {
-    text-align: right;
-    font-style: italic;
-}
-
-::placeholder {
-    color: #acabab;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea,
-select {
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-    outline: 0;
-    padding: 15px;
-    background-color: #dadada;
-    color: #5e6572;
-    box-shadow: inset 0 1px 0 rgba(28,35,33,0.03);
-    margin-bottom: 30px;
-}
-
-input:focus, 
-select:focus, 
-textarea:focus,
-button:focus {
-    box-shadow: 0 0 2px 1px #5e6572;
-}
-
-#state {
-    height: 48px;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 5px;
-    margin-top: 2px;
-}
-
-select {
-    padding: 6px;
-    height: 32px;
-    border-radius: 2px;
-}
-
-button {
-    padding: 20px 40px;
-    color: #eef1ef;
-    outline: 0;
-    border: none;
-    background-color: #a9b4c2;
-    text-align: center;
-    border-radius: 10px;
-    width: 100%;
-    box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
-    margin-bottom: 1em;
-}
-
 .newsletter label, 
 .newsletter input {
     float: left;
@@ -178,11 +181,28 @@ button {
     display: table;
 }
 
+/* ===== ID Styles ===== */
+
+#state {
+    padding: 10px;
+    height: 48px;
+}
+
+#zip {
+    width: 60%;
+}
+
+/* ===== Media Query ===== */
+
 @media (min-width: 768px) {
 
     .wrapper, 
     .intro {
         max-width: 1200px;
+    }
+
+        .contact label[for="name"] {
+        padding-top: 15px;
     }
 
     .field {
@@ -201,10 +221,6 @@ button {
 
     #zip {
         max-width: 25%;
-    }
-
-    .contact label[for="name"] {
-        padding-top: 15px;
     }
 
 }
