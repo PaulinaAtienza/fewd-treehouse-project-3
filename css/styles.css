@@ -110,28 +110,31 @@ input:required {
     font-style: italic;
 }
 
+::placeholder {
+    color: #acabab;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea,
 select {
-    background: rgba(131, 84, 192, 0.1);
     border: none;
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
-    margin: 0;
     outline: 0;
     padding: 15px;
-    background-color: #e8eeef;
-    color: #8a97a0;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    background-color: #dadada;
+    color: #5e6572;
+    box-shadow: inset 0 1px 0 rgba(28,35,33,0.03);
     margin-bottom: 30px;
 }
 
 input:focus, 
 select:focus, 
-textarea:focus {
+textarea:focus,
+button:focus {
     box-shadow: 0 0 2px 1px #5e6572;
 }
 
@@ -154,14 +157,14 @@ select {
 button {
     padding: 20px 40px;
     color: #eef1ef;
+    outline: 0;
+    border: none;
     background-color: #a9b4c2;
     text-align: center;
     border-radius: 10px;
     width: 100%;
-    border: 1px solid #5e6572;
-    border-width: 1px 1px 3px;
-    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
-    margin-bottom: 10px;
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+    margin-bottom: 1em;
 }
 
 .newsletter label, 
