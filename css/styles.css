@@ -135,6 +135,8 @@ select:focus,
 textarea:focus,
 button:focus {
     box-shadow: 0 0 2px 1px #5e6572;
+    background-color: #ececec;
+    transition: background-color 2s ease-out; 
 }
 
 ::placeholder {
