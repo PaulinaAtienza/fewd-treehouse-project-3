@@ -208,7 +208,7 @@ textarea:focus {
         max-width: 1200px;
     }
 
-        .contact label[for="name"] {
+    .contact label[for="name"] {
         padding-top: 15px;
     }
 
@@ -223,7 +223,7 @@ textarea:focus {
 
     .field > input:not([id="zip"]), 
     .field > select {
-        flex-basis: 75%;
+        flex-basis: 80%;
     }
 
     #zip {
